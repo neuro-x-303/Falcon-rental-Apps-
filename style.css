@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     color: white;
     background-color: transparent;
     overflow-x: hidden;
@@ -84,7 +84,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
 }
