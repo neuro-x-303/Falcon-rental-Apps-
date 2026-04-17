@@ -51,9 +51,9 @@ body {
 }
 
 .logo {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 700;
     color: #fff;
     text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
 }
@@ -165,11 +165,11 @@ body {
 }
 
 .hero h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 5.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-weight: 800;
     color: #fff;
     text-shadow: 0 0 15px #00f3ff;
 }
@@ -405,9 +405,9 @@ footer {
 }
 
 .footer-content .brand {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 700;
     color: white;
     text-shadow: 0 0 10px #00f3ff;
     margin-bottom: 1rem;
