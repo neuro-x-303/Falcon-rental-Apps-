@@ -80,23 +80,68 @@ body {
     text-shadow: 0 0 8px #00f3ff;
 }
 
-.btn-primary {
-    background: transparent;
-    color: #00f3ff;
-    border: 1px solid #00f3ff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
+.auth-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
     font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
-    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    background: #00f3ff;
+.nav-signin {
+    text-decoration: none;
+    color: #ff00ea; /* Hot Pink */
+    text-shadow: 0 0 5px rgba(255, 0, 234, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-signin::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ff00ea;
+    box-shadow: 0 0 8px #ff00ea;
+    transition: width 0.3s ease;
+}
+
+.nav-signin:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #ff00ea, 0 0 30px #ff00ea;
+}
+
+.nav-signin:hover::after {
+    width: 100%;
+}
+
+.nav-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.2rem;
+}
+
+.nav-signup {
+    text-decoration: none;
+    background: transparent;
+    color: #ccff00; /* Neon Lime */
+    border: 2px solid #ccff00;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px; /* Techy sharp edges */
+    box-shadow: 0 0 10px rgba(204, 255, 0, 0.3), inset 0 0 5px rgba(204, 255, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+}
+
+.nav-signup:hover {
+    background: #ccff00;
     color: #000;
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
-    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.8), inset 0 0 10px rgba(204, 255, 0, 0.5);
+    transform: translateY(-3px) scale(1.05);
 }
 
 /* Hero Section */
@@ -370,6 +415,25 @@ footer {
 
 .footer-content .brand span {
     color: var(--primary);
+}
+
+.contact-info {
+    margin: 1.5rem 0;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.copyright {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
 /* Responsive */
