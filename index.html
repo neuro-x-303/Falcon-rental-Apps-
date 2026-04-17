@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falcon Rental Apps | Premium Living</title>
+    <meta name="description" content="Discover premium rental properties tailored to your lifestyle. Find your dream home with Falcon Rental Apps.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Falcon <span>Rental Apps</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn-primary">Sign In</button>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Find Your Next <br><span class="highlight">Perfect Home</span></h1>
+            <p>Discover premium apartments and houses in top locations with zero hassle.</p>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by location, property type...">
+                <button id="searchBtn" class="btn-search">Search</button>
+            </div>
+        </div>
+        <div class="hero-image-overlay"></div>
+    </header>
+
+    <section id="properties" class="properties-section">
+        <div class="section-header">
+            <h2>Featured Properties</h2>
+            <p>Handpicked for your ultimate comfort</p>
+        </div>
+        
+        <div id="propertyGrid" class="property-grid">
+            <!-- Properties injected via JS -->
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Why Choose Falcon Rental Apps?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">✨</div>
+                    <h3>Premium Selection</h3>
+                    <p>Only top-tier properties make it to our listings.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Secure Booking</h3>
+                    <p>Your transactions and data are always protected.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎧</div>
+                    <h3>24/7 Support</h3>
+                    <p>We are here for you anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="brand">Falcon <span>Rental Apps</span></div>
+            <p>&copy; 2026 Falcon Rental Apps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
