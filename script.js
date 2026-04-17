@@ -1,3 +1,88 @@
+// --- Three.js Background Implementation ---
+const canvas = document.getElementById('bg-canvas');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
+// Create techy particles
+const particlesGeometry = new THREE.BufferGeometry();
+const particlesCount = 2000;
+const posArray = new Float32Array(particlesCount * 3);
+
+for(let i = 0; i < particlesCount * 3; i++) {
+    // Spread particles across a wide 3D area
+    posArray[i] = (Math.random() - 0.5) * 25; 
+}
+
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+const material = new THREE.PointsMaterial({
+    size: 0.02,
+    color: 0x38bdf8, // Cyan tech color
+    transparent: true,
+    opacity: 0.8,
+    blending: THREE.AdditiveBlending
+});
+
+const particlesMesh = new THREE.Points(particlesGeometry, material);
+scene.add(particlesMesh);
+
+camera.position.z = 5;
+
+// Animation Loop
+let mouseX = 0;
+let mouseY = 0;
+let targetX = 0;
+let targetY = 0;
+
+const windowHalfX = window.innerWidth / 2;
+const windowHalfY = window.innerHeight / 2;
+
+document.addEventListener('mousemove', (event) => {
+    mouseX = (event.clientX - windowHalfX);
+    mouseY = (event.clientY - windowHalfY);
+});
+
+function animate() {
+    requestAnimationFrame(animate);
+
+    targetX = mouseX * 0.001;
+    targetY = mouseY * 0.001;
+
+    // Slowly rotate the entire particle system
+    particlesMesh.rotation.y += 0.001;
+    particlesMesh.rotation.x += 0.0005;
+
+    // Add slight parallax effect based on mouse movement
+    particlesMesh.rotation.y += 0.05 * (targetX - particlesMesh.rotation.y);
+    particlesMesh.rotation.x += 0.05 * (targetY - particlesMesh.rotation.x);
+
+    // Make particles slowly move towards the camera
+    const positions = particlesMesh.geometry.attributes.position.array;
+    for(let i = 2; i < particlesCount * 3; i += 3) {
+        positions[i] += 0.005;
+        if(positions[i] > 5) {
+            positions[i] = -15; // reset to back
+        }
+    }
+    particlesMesh.geometry.attributes.position.needsUpdate = true;
+
+    renderer.render(scene, camera);
+}
+
+animate();
+
+// Handle Resize
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+// ------------------------------------------
+
 // Mock Data for Properties
 const properties = [
     {
@@ -112,9 +197,49 @@ styleSheet.innerText = \`
 \`;
 document.head.appendChild(styleSheet);
 
-// Initial Render
+// Initial Render and Animations
 document.addEventListener('DOMContentLoaded', () => {
     renderProperties(properties);
+
+    // Typing Effect for Hero
+    const heroHeading = document.querySelector('.hero h1');
+    if(heroHeading) {
+        heroHeading.innerHTML = '<span class="typing"></span><span class="cursor" style="animation: blink 1s infinite;">|</span>';
+        const typingSpan = heroHeading.querySelector('.typing');
+        const textToType = "Find Your Next Perfect Home_";
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < textToType.length) {
+                typingSpan.innerHTML += textToType.charAt(i);
+                i++;
+                setTimeout(typeWriter, 60);
+            } else {
+                setTimeout(() => {
+                    heroHeading.innerHTML = 'Find Your Next <br><span class="highlight">Perfect Home</span>';
+                }, 500);
+            }
+        }
+        setTimeout(typeWriter, 500);
+    }
+
+    // Scroll Animations for Feature Cards
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        card.style.transition = `all 0.6s ease-out ${index * 0.1}s`;
+        observer.observe(card);
+    });
 });
 
 // Search Functionality
