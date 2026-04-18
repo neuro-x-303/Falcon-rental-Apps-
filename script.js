@@ -1,158 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
+< !DOCTYPE html >
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falcon Rental Apps | Premium Living</title>
-    <meta name="description"
-        content="Discover premium rental properties tailored to your lifestyle. Find your dream home with Falcon Rental Apps.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Falcon Rental Apps | Premium Living</title>
+                    <meta name="description"
+                        content="Discover premium rental properties tailored to your lifestyle. Find your dream home with Falcon Rental Apps.">
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+                                    rel="stylesheet">
+                                    <link rel="stylesheet" href="style.css">
+                                    </head>
 
-<body>
-    <canvas id="bg-canvas"></canvas>
-    <nav class="navbar">
-        <div class="logo">Falcon <span>Rental Apps</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li>
-                <select class="nav-select" onchange="window.location.href=this.value">
-                    <option value="#Workplace">Workplace</option>
-                    <option value="#schools">Schools</option>
-                    <option value="#hotels">Hotels</option>
-                    <option value="#shops">Shops</option>
-                </select>
-            </li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="auth-options">
-            <a href="#book" class="nav-book">Book a Slot</a>
-        </div>
-    </nav>
+                                    <body>
+                                        <canvas id="bg-canvas"></canvas>
+                                        <nav class="navbar">
+                                            <div class="logo">Falcon <span>Rental Apps</span></div>
+                                            <ul class="nav-links">
+                                                <li><a href="#home">Home</a></li>
+                                                <li>
+                                                    <select class="nav-select" onchange="window.location.href=this.value">
+                                                        <option value="#Workplace">Workplace</option>
+                                                        <option value="#schools">Schools</option>
+                                                        <option value="#hotels">Hotels</option>
+                                                        <option value="#shops">Shops</option>
+                                                    </select>
+                                                </li>
+                                                <li><a href="#about">About</a></li>
+                                                <li><a href="#contact">Contact</a></li>
+                                            </ul>
+                                            <div class="auth-options">
+                                                <a href="#book" class="nav-book">Book a Slot</a>
+                                            </div>
+                                        </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Find Your Next <br><span class="highlight">Perfect Home</span></h1>
-            <p>Discover premium and secure app with zero hassle for their workplace.</p>
+                                        <header id="home" class="hero">
+                                            <div class="hero-content">
+                                                <h1>Find Your Next <br><span class="highlight">Perfect Home</span></h1>
+                                                <p>Discover premium and secure app with zero hassle for their workplace.</p>
 
-            <div class="search-bar-container">
-                <div class="search-glow"></div>
-                <div class="search-bar">
-                    <div class="search-input-wrapper">
-                        <input type="text" id="searchInput"
-                            placeholder="rental apps for schools, chotels , shops , and ...">
-                    </div>
-                    <div class="search-bottom-row">
-                        <div class="left-actions">
-                            <button class="action-icon">＋</button>
-                            <button class="action-btn">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                                    </path>
-                                </svg>
-                                Tools
-                            </button>
-                        </div>
-                        <div class="right-actions">
-                            <button class="action-btn">Fast
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polyline points="6 9 12 15 18 9"></polyline>
-                                </svg>
-                            </button>
-                            <button id="searchBtn" class="action-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                                    <line x1="12" y1="19" x2="12" y2="23"></line>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-image-overlay"></div>
-    </header>
+                                                <div class="search-bar-container">
+                                                    <div class="search-glow"></div>
+                                                    <div class="search-bar">
+                                                        <div class="search-input-wrapper">
+                                                            <input type="text" id="searchInput"
+                                                                placeholder="rental apps for schools, chotels , shops , and ...">
+                                                        </div>
+                                                        <div class="search-bottom-row">
+                                                            <div class="left-actions">
+                                                                <button class="action-icon">＋</button>
+                                                                <button class="action-btn">
+                                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                        stroke-width="2">
+                                                                        <path
+                                                                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                                                        </path>
+                                                                    </svg>
+                                                                    Tools
+                                                                </button>
+                                                            </div>
+                                                            <div class="right-actions">
+                                                                <button class="action-btn">Fast
+                                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                        stroke-width="2">
+                                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                                    </svg>
+                                                                </button>
+                                                                <button id="searchBtn" class="action-icon">
+                                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                        stroke-width="2">
+                                                                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                                                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                                                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hero-image-overlay"></div>
+                                        </header>
 
-    <section id="properties" class="properties-section">
-        <div class="section-header">
-            <h2>Featured Properties</h2>
-            <p>Handpicked for your ultimate comfort</p>
-        </div>
+                                        <section id="properties" class="properties-section">
+                                            <div class="section-header">
+                                                <h2>Featured Properties</h2>
+                                                <p>Handpicked for your ultimate comfort</p>
+                                            </div>
 
-        <div id="propertyGrid" class="property-grid">
-            <!-- Properties injected via JS -->
-        </div>
-    </section>
+                                            <div id="propertyGrid" class="property-grid">
+                                                <!-- Properties injected via JS -->
+                                            </div>
+                                        </section>
 
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>Why Choose Falcon Rental Apps?</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="icon">✨</div>
-                    <h3>Premium Selection</h3>
-                    <p>Only top-tier work make it to our listings.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🔒</div>
-                    <h3>Secure Booking</h3>
-                    <p>Your transactions and data are always protected.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🎧</div>
-                    <h3>24/7 Support</h3>
-                    <p>We are here for you anytime, anywhere.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                                        <section id="about" class="about-section">
+                                            <div class="about-content">
+                                                <h2>Why Choose Falcon Rental Apps?</h2>
+                                                <div class="features">
+                                                    <div class="feature-card">
+                                                        <div class="icon">✨</div>
+                                                        <h3>Premium Selection</h3>
+                                                        <p>Only top-tier work make it to our listings.</p>
+                                                    </div>
+                                                    <div class="feature-card">
+                                                        <div class="icon">🔒</div>
+                                                        <h3>Secure Booking</h3>
+                                                        <p>Your transactions and data are always protected.</p>
+                                                    </div>
+                                                    <div class="feature-card">
+                                                        <div class="icon">🎧</div>
+                                                        <h3>24/7 Support</h3>
+                                                        <p>We are here for you anytime, anywhere.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="brand">Falcon <span>Rental Apps</span></div>
-            <div class="contact-info">
-                <p>📧 Email: shree.113207@gmail.com</p>
-                <p>📞 Mobile: +91 8210615200</p>
-            </div>
-            <p class="copyright">&copy; 2026 Falcon Rental Apps. All rights reserved.</p>
-        </div>
-    </footer>
+                                        <footer id="contact">
+                                            <div class="footer-content">
+                                                <div class="brand">Falcon <span>Rental Apps</span></div>
+                                                <div class="contact-info">
+                                                    <p>📧 Email: shree.113207@gmail.com</p>
+                                                    <p>📞 Mobile: +91 8210615200</p>
+                                                </div>
+                                                <p class="copyright">&copy; 2026 Falcon Rental Apps. All rights reserved.</p>
+                                            </div>
+                                        </footer>
 
-    <div id="bookingModal" class="modal">
-        <div class="modal-content tech-box">
-            <span class="close-btn">&times;</span>
-            <h2>Book Your <span class="highlight">Slot</span></h2>
-            <form id="bookingForm" class="tech-form">
-                <div class="input-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" required placeholder="Enter your name">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="Enter your email">
-                </div>
-                <div class="input-group">
-                    <label for="date">Select Date</label>
-                    <input type="date" id="date" required>
-                </div>
-                <button type="submit" class="btn-submit">Confirm Booking</button>
-            </form>
-        </div>
-    </div>
+                                        <div id="bookingModal" class="modal">
+                                            <div class="modal-content tech-box">
+                                                <span class="close-btn">&times;</span>
+                                                <h2>Book Your <span class="highlight">Slot</span></h2>
+                                                <form id="bookingForm" class="tech-form">
+                                                    <div class="input-group">
+                                                        <label for="name">Full Name</label>
+                                                        <input type="text" id="name" required placeholder="Enter your name">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="email">Email</label>
+                                                        <input type="email" id="email" required placeholder="Enter your email">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="date">Select Date</label>
+                                                        <input type="date" id="date" required>
+                                                    </div>
+                                                    <button type="submit" class="btn-submit">Confirm Booking</button>
+                                                </form>
+                                            </div>
+                                        </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js"></script>
-</body>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+                                        <script src="script.js"></script>
+                                    </body>
 
-</html>
+                                </html>
