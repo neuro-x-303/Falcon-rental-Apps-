@@ -269,5 +269,50 @@ window.addEventListener('scroll', () => {
     } else {
         nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
         nav.style.background = 'rgba(255, 255, 255, 0.8)';
+});
+
+// Booking Modal Logic
+const navBookBtn = document.querySelector('.nav-book');
+const bookingModal = document.getElementById('bookingModal');
+const closeBtn = document.querySelector('.close-btn');
+const bookingForm = document.getElementById('bookingForm');
+
+navBookBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    bookingModal.classList.add('show');
+});
+
+closeBtn.addEventListener('click', () => {
+    bookingModal.classList.remove('show');
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === bookingModal) {
+        bookingModal.classList.remove('show');
     }
+});
+
+bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Simulate booking action
+    const submitBtn = bookingForm.querySelector('.btn-submit');
+    const originalText = submitBtn.innerText;
+    
+    submitBtn.innerText = 'Processing...';
+    submitBtn.style.background = 'rgba(0, 243, 255, 0.2)';
+    
+    setTimeout(() => {
+        submitBtn.innerText = 'Slot Booked!';
+        submitBtn.style.background = 'rgba(204, 255, 0, 0.4)';
+        submitBtn.style.color = '#ccff00';
+        submitBtn.style.borderColor = '#ccff00';
+        
+        setTimeout(() => {
+            bookingModal.classList.remove('show');
+            bookingForm.reset();
+            // Reset button styles
+            submitBtn.innerText = originalText;
+            submitBtn.style = '';
+        }, 2000);
+    }, 1500);
 });
