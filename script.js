@@ -316,3 +316,5 @@ bookingForm.addEventListener('submit', (e) => {
         }, 2000);
     }, 1500);
 });
+
+                
