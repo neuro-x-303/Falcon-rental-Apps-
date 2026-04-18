@@ -16,7 +16,14 @@
         <div class="logo">Falcon <span>Rental Apps</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#properties">Properties</a></li>
+            <li>
+                <select class="nav-select" onchange="window.location.href=this.value">
+                    <option value="#properties">Properties</option>
+                    <option value="#schools">Schools</option>
+                    <option value="#hotels">Hotels</option>
+                    <option value="#shops">Shops</option>
+                </select>
+            </li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -34,7 +41,7 @@
                 <div class="search-glow"></div>
                 <div class="search-bar">
                     <div class="search-input-wrapper">
-                        <input type="text" id="searchInput" placeholder="|Ask Gemini">
+                        <input type="text" id="searchInput" placeholder="rental apps for schools, chotels , shops , and ...">
                     </div>
                     <div class="search-bottom-row">
                         <div class="left-actions">
@@ -77,7 +84,7 @@
                 <div class="feature-card">
                     <div class="icon">✨</div>
                     <h3>Premium Selection</h3>
-                    <p>Only top-tier properties make it to our listings.</p>
+                    <p>Only top-tier work make it to our listings.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">🔒</div>
